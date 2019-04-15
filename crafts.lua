@@ -645,7 +645,7 @@ minetest.register_craft({
     output = "scifi_nodes:doomwall3 6",
     recipe = {
         {"scifi_nodes:white", "scifi_nodes:white", "scifi_nodes:white"},
-        {"scifi_nodes:black", "dye:red", "scifi_nodes:black"},
+        {"scifi_nodes:black", "dye:grey", "scifi_nodes:black"},
         {"scifi_nodes:white", "scifi_nodes:white", "scifi_nodes:white"}
     }
 })
@@ -1575,15 +1575,6 @@ minetest.register_craft({
 minetest.register_craft({
     output = 'scifi_nodes:doomwall43 6',
     recipe = {
-        {"scifi_nodes:white","dye:black","scifi_nodes:white"},
-        {"scifi_nodes:black","dye:dark_green","scifi_nodes:black"},
-        {"scifi_nodes:white","dye:yellow","scifi_nodes:white"}
-    }
-})
-
-minetest.register_craft({
-    output = 'scifi_nodes:doomwall43 6',
-    recipe = {
         {"scifi_nodes:white","scifi_nodes:white","scifi_nodes:white"},
         {"scifi_nodes:black","dye:dark_green","scifi_nodes:black"},
         {"scifi_nodes:white","default:grass_1","scifi_nodes:white"}
@@ -1670,7 +1661,7 @@ minetest.register_craft({
 minetest.register_craft({
     output = 'scifi_nodes:stripes2top 3',
     recipe = {
-        {"scifi_nodes:black","scifi_noedes:black","scifi_nodes:black"},
+        {"scifi_nodes:black","scifi_nodes:black","scifi_nodes:black"},
         {"default:silver_sand","default:silver_sand","default:silver_sand"}
     }
 })
@@ -1680,6 +1671,75 @@ minetest.register_craft({
     recipe = {
         {"scifi_nodes:stripes2top"},
         {"scifi_nodes:stripes"}
+    }
+})
+
+-- 2 Black vent from 1 black vent and 1 blackwall
+minetest.register_craft({
+    output = "scifi_nodes:blackvnt 2",
+    recipe = {
+        {"scifi_nodes:black"},
+        {"scifi_nodes:blackvent"}
+    }
+})
+
+-- 8 doomwall4 from 4 plastic wall, 4 blackwall and 1 dark green dye
+minetest.register_craft({
+    output = 'scifi_nodes:doomwall4 8',
+    recipe = {
+        {"scifi_nodes:white","scifi_nodes:black","scifi_nodes:white"},
+        {"scifi_nodes:black", "dye:dark_green",  "scifi_nodes:black"},
+        {"scifi_nodes:white","scifi_nodes:black","scifi_nodes:white"}
+    }
+})
+
+-- 4 Green Wall Panel from 4 green metal wall and 1 green dye
+minetest.register_craft({
+    output = "scifi_nodes:green2 4",
+    recipe = {
+        {"scifi_nodes:greenmetal", "", "scifi_nodes:greenmetal"},
+        {"", "dye:green", ""},
+        {"scifi_nodes:greenmetal", "", "scifi_nodes:greenmetal"}
+    }
+})
+
+-- 5 holes from 5 dent
+minetest.register_craft({
+    output = "scifi_nodes:holes 5",
+    recipe = {
+        {"scifi_nodes:dent", "", "scifi_nodes:dent"},
+        {"", "scifi_nodes:dent", ""},
+        {"scifi_nodes:dent", "", "scifi_nodes:dent"}
+    }
+})
+
+-- 6 Wall Monitor from 3 Dark Glass, (green, red, blue) Dye and 3 Blackwall
+minetest.register_craft({
+    output = "scifi_nodes:screen3 3",
+    recipe = {
+        {"scifi_nodes:glass", "scifi_nodes:glass", "scifi_nodes:glass"},
+        {"dye:red", "dye:green", "dye:blue"},
+        {"scifi_nodes:black", "scifi_nodes:black", "scifi_nodes:black"}
+    }
+})
+
+-- 6 doomengine from 4 doomwall4 and 4 doomwall1 and 1 Dirt
+minetest.register_craft({
+    output = "scifi_nodes:doomengine 2",
+    recipe = {
+        {"scifi_nodes:doomwall4", "scifi_nodes:doomwall1", "scifi_nodes:doomwall4"},
+        {"scifi_nodes:doomwall1", "default:dirt", "scifi_nodes:doomwall1"},
+        {"scifi_nodes:doomwall4", "scifi_nodes:doomwall1", "scifi_nodes:doomwall4"}
+    }
+})
+
+-- 6 blackpipe from 6 blackwall and 3 white dye
+minetest.register_craft({
+    output = "scifi_nodes:blackpipe 6",
+    recipe = {
+        {"dye:white", "scifi_nodes:blackwall", "scifi_nodes:blackwall"},
+        {"dye:white", "scifi_nodes:blackwall", "dye:white"},
+        {"dye:white", "scifi_nodes:blackwall", "scifi_nodes:blackwall"}
     }
 })
 
